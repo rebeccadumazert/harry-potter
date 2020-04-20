@@ -11,9 +11,7 @@ export default class Houses extends Component {
   }
   getHousesDatas = async () => {
     const houses = await getHouses();
-    this.setState({ houses }, () => {
-      console.log(this.state.houses);
-    });
+    this.setState({ houses });
   };
   render() {
     const { houses } = this.state;
