@@ -1,8 +1,11 @@
 import axios from 'axios';
 
-export const getCharacters = async () => {
-  console.log('wsh');
-  const { data } = await axios.get(`/api/v1/characters/`);
+export const getCharacters = async (page) => {
+  const { data } = await axios.get(`/api/v1/characters/`, {
+    params: {
+      page,
+    },
+  });
   console.log(data);
   return data;
 };

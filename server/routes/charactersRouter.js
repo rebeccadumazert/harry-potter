@@ -3,6 +3,6 @@ const charactersCtrl = require('../controllers/charactersCtrl');
 
 router.get('/', charactersCtrl.getCharacters);
 
-// router.get('/:id', charactersCtrl.getCharactersById);
+// router.get('/:id', charactersCtrl.getCharacterById);
 
 module.exports = router;
