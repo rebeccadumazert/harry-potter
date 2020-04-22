@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import './index.css';
 
 export const Head = styled.div`
   color: red;

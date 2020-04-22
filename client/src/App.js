@@ -12,7 +12,6 @@ import './components/styles/index.css';
 function App() {
   return (
     <BrowserRouter>
-      <p>Love</p>
       <AppContent>
         <Route path="/" component={Header}></Route>
         <CharactersCard>
