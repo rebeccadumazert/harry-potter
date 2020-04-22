@@ -11,4 +11,5 @@ export const StyledLink = styled(Link)`
   color: black;
   text-decoration: none;
   font-family: 'Harry Potter';
+  font-size: 40px;
 `;

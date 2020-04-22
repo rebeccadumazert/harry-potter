@@ -7,6 +7,8 @@ import Spells from './components/Spells';
 import { Header } from './components/Header';
 import HouseDetail from './components/HouseDetail';
 import { AppContent, CharactersCard } from './components/styles/App';
+import './components/styles/globalStyle';
+
 function App() {
   return (
     <BrowserRouter>
