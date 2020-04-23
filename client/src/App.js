@@ -7,6 +7,7 @@ import Spells from './components/Spells';
 import { Header } from './components/Header';
 import HouseDetail from './components/HouseDetail';
 import { AppContent, CharactersCard } from './components/styles/App';
+import Hat from './components/Hat';
 import './components/styles/index.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/houses" component={Houses}></Route>
         <Route path="/houses/:id" component={HouseDetail}></Route>
         <Route path="/spells" component={Spells}></Route>
+        <Hat></Hat>
       </AppContent>
     </BrowserRouter>
   );

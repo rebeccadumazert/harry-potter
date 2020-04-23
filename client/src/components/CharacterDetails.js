@@ -7,7 +7,7 @@ export default class CharacterDetails extends Component {
     character: [],
   };
   componentDidMount() {
-    // this.getCharacter();
+    this.getCharacter();
   }
   componentDidUpdate(prevProps) {
     if (prevProps.match.params.id !== this.props.match.params.id) {

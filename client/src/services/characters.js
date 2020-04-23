@@ -6,15 +6,10 @@ export const getCharacters = async (page) => {
       page,
     },
   });
-  console.log(data);
   return data;
 };
 
 export const getCharacterById = async (id) => {
-  console.log('hey');
-  // const { data } = await axios.get(
-  //   `${BASE_URL}characters/${id}?key=${API_KEY}`
-  // );
-  // console.log(data);
-  // return data;
+  const { data } = await axios.get(`/api/v1/characters/${id}`);
+  return data;
 };

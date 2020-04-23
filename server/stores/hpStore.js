@@ -8,4 +8,16 @@ const getCharactersStore = async () => {
   return data;
 };
 
-module.exports = { getCharactersStore };
+const getCharacterByIdStore = async (id) => {
+  const { data } = await axios.get(
+    `${BASE_URL}characters/${id}?key=${API_KEY}`
+  );
+  return data;
+};
+
+const getHat = async () => {
+  const { data } = await axios.get(`${BASE_URL}sortingHat`);
+  return data;
+};
+
+module.exports = { getCharactersStore, getCharacterByIdStore, getHat };
