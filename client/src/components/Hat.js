@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { getHat } from '../services/hat';
-import { HatContent, HatContainer } from './styles/hat';
-import hat from './images/hat.png';
+import { HatContent, HatContainer, HatSays, HatResponse } from './styles/hat';
+import { ShakeLittle } from 'reshake';
 
 export default class Hat extends Component {
   state = {
@@ -13,13 +13,21 @@ export default class Hat extends Component {
     this.setState({ hat });
   };
   render() {
+    const { hat } = this.state;
     return (
       <HatContainer>
-        <h1>WHATS UR HOUSE?</h1>
+        <HatSays>El chapo te dira qui tu es...</HatSays>
+
         <HatContent onClick={this.getRandomHat}>
-          <img src={hat} alt="" />
+          <ShakeLittle>
+            <img
+              src="https://i.skyrock.net/4209/59484209/pics/3217756773_1_6_0enNoVKG.gif"
+              alt=""
+            />
+          </ShakeLittle>
         </HatContent>
-        <div>{this.state.hat}</div>
+
+        <HatResponse>{hat}</HatResponse>
       </HatContainer>
     );
   }

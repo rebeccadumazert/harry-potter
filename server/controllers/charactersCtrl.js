@@ -1,9 +1,8 @@
 const store = require('../stores/hpStore');
 
-const RESULTS_BY_PAGES = 10;
+const RESULTS_BY_PAGES = 8;
 
 const getCharacters = async (req, res) => {
-  console.log('hey');
   const page = Number(req.query.page);
   const start = (page - 1) * RESULTS_BY_PAGES;
   const end = start + RESULTS_BY_PAGES;

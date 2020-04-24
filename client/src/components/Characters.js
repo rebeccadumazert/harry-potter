@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { getCharacters } from '../services/characters';
-import { CharactersContent } from './styles/characters';
+import {
+  CharactersContent,
+  StyledLink,
+  StyledButton,
+} from './styles/characters';
+import next from './images/next.png';
+import previous from './images/previous.png';
 
 export default class Characters extends Component {
   state = {
@@ -36,11 +41,17 @@ export default class Characters extends Component {
       <CharactersContent>
         {characters.map((character) => (
           <div key={character._id}>
-            <Link to={`/character/${character._id}`}>{character.name}</Link>
+            <StyledLink to={`/character/${character._id}`}>
+              {character.name}
+            </StyledLink>
           </div>
         ))}
-        <button onClick={this.changePage.bind(null, -1)}>previous</button>
-        <button onClick={this.changePage.bind(null, 1)}>next</button>
+        <StyledButton onClick={this.changePage.bind(null, -1)}>
+          <img src={previous} alt="" />
+        </StyledButton>
+        <StyledButton onClick={this.changePage.bind(null, 1)}>
+          <img src={next} alt="next" />
+        </StyledButton>
       </CharactersContent>
     );
   }
