@@ -7,8 +7,11 @@ export const HatContainer = styled.div`
   }
 `;
 export const HatContent = styled.button`
+  outline: none;
   border: none;
   background-color: transparent;
+  cursor: url('https://img.icons8.com/material/24/000000/fantasy--v1.png'),
+    pointer;
 `;
 export const HatSays = styled.p`
   color: white;

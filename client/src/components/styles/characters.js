@@ -18,6 +18,9 @@ export const StyledLink = styled(Link)`
 `;
 
 export const StyledButton = styled.button`
+  cursor: url('https://img.icons8.com/material/24/000000/fantasy--v1.png'),
+    pointer;
+  outline: none;
   border: none;
   background-color: transparent;
   margin: 5px 20px 0 20px;

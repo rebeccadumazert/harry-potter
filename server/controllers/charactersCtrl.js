@@ -1,13 +1,10 @@
 const store = require('../stores/hpStore');
-
-const RESULTS_BY_PAGES = 8;
+const { pagination } = require('./services.js');
 
 const getCharacters = async (req, res) => {
   const page = Number(req.query.page);
-  const start = (page - 1) * RESULTS_BY_PAGES;
-  const end = start + RESULTS_BY_PAGES;
   const characters = await store.getCharactersStore();
-  res.json(characters.slice(start, end));
+  res.json(pagination(characters, page));
 };
 
 const getCharacterById = async (req, res) => {
