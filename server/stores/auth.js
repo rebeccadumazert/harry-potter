@@ -1,3 +1,3 @@
-const API_KEY = '$2a$10$a3ydE4vEMdVecfvgwbkIdesCZvY.n3zzlBu5jmgEq8PkZo3mUEQ4W';
+const API_KEY = process.env.AUTH_HP;
 
 module.exports = API_KEY;

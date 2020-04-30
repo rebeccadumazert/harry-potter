@@ -15,6 +15,7 @@ function App() {
     <BrowserRouter>
       <AppContent>
         <Route path="/" component={Header}></Route>
+        <Route path="/" exact component={Hat}></Route>
         <CharactersCard>
           <Route path="/character/" component={Characters}></Route>
           <Route path="/character/:id" component={CharacterDetails}></Route>
@@ -22,7 +23,6 @@ function App() {
         <Route path="/houses" component={Houses}></Route>
         <Route path="/houses/:id" component={HouseDetail}></Route>
         <Route path="/spells" component={Spells}></Route>
-        <Hat></Hat>
       </AppContent>
     </BrowserRouter>
   );

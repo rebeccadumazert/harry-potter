@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getCharacters } from '../services/characters';
-import { CharactersContent } from './styles/characters';
+import {
+  CharactersContent,
+  StyledLink,
+  StyledButton,
+} from './styles/characters';
+import next from './images/next.png';
+import previous from './images/previous.png';
 
 const Characters = () => {
   const [characters, setCharacters] = useState([]);

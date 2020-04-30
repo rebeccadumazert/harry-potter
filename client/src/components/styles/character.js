@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const Character = styled.div`
-  border: solid black 1px;
   padding: 3%;
-  margin: 1%;
+  color: #1f0d88;
   width: 30%;
+  text-align: center;
+  font-size: 18px;
   border-radius: 7px;
+  background-color: rgb(255, 255, 255, 0.1);
 `;

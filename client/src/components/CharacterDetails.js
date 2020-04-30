@@ -29,7 +29,7 @@ export default class CharacterDetails extends Component {
     } = this.state;
     return (
       <Character>
-        <p>{name}</p>
+        <h2>{name}</h2>
         <p>{role}</p>
         <p>{species}</p>
         <p>{bloodStatus}</p>

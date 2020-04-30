@@ -1,12 +1,23 @@
 import React from 'react';
-import { StyledLink, Head } from './styles/header';
+import {
+  StyledLink,
+  ContainerHead,
+  ContainerLogo,
+  Logo,
+} from './styles/header';
+import logo from './images/harry-potter.png';
 
 export const Header = () => {
   return (
-    <Head>
+    <ContainerHead>
+      <ContainerLogo>
+        <StyledLink to="/">
+          <Logo src={logo} alt="" />
+        </StyledLink>
+      </ContainerLogo>
       <StyledLink to="/houses">Houses</StyledLink>
       <StyledLink to="/spells">Spells</StyledLink>
       <StyledLink to="/character">Characters</StyledLink>
-    </Head>
+    </ContainerHead>
   );
 };
