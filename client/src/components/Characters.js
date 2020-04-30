@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { getCharacters } from '../services/characters';
 import {
   CharactersContent,
@@ -14,14 +13,12 @@ const Characters = () => {
   const [page, setPage] = useState(1);
 
   useEffect(() => {
-    console.log(page);
+    const getCharactersDatas = async () => {
+      const charactersDatas = await getCharacters(page);
+      setCharacters(charactersDatas);
+    };
     getCharactersDatas();
   }, [page]);
-
-  const getCharactersDatas = async () => {
-    const charactersDatas = await getCharacters(page);
-    setCharacters(charactersDatas);
-  };
 
   const changePage = (newPage) => {
     setPage(page + newPage);
@@ -31,13 +28,17 @@ const Characters = () => {
     <CharactersContent>
       {characters.map((character) => (
         <div key={character._id}>
-          <Link to={`/character/${character._id}`}>{character.name}</Link>
+          <StyledLink to={`/character/${character._id}`}>
+            {character.name}
+          </StyledLink>
         </div>
       ))}
-      {page >= 1 && (
-        <button onClick={changePage.bind(null, -1)}>previous</button>
-      )}
-      <button onClick={changePage.bind(null, 1)}>next</button>
+      <StyledButton onClick={changePage.bind(null, -1)}>
+        <img src={previous} alt="" />
+      </StyledButton>
+      <StyledButton onClick={changePage.bind(null, 1)}>
+        <img src={next} alt="next" />
+      </StyledButton>
     </CharactersContent>
   );
 };
